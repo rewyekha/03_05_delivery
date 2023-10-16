@@ -7,7 +7,7 @@ name: Docker
 
 on:
   schedule:
-    - cron: '17 10 * * *'
+    - cron: '40 11 * * *'
   push:
     branches: [ "main" ]
     # Publish semver tags as releases.
@@ -29,7 +29,7 @@ jobs:
       contents: read
 
    build:
-    needs: [integraton]
+    needs: [integration]
     runs-on: ubuntu-latest
     permissions:
       contents: read
